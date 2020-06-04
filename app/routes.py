@@ -16,7 +16,6 @@ Users = Base.classes.users
 def home():
     user_id = session.get("user_id")
     user = db.session.query(Users).filter_by(user_id=user_id).first()
-    print(user)
     return render_template("home.html", user = user)
 
 
@@ -27,7 +26,6 @@ def register():
         user = Users(email = form.email.data, pw = form.password.data)
         db.session.add(user)
         db.session.commit()
-        print("Passt")
         return redirect(url_for("login"))
     else:
         print("User existiert bereits oder Passwort falsch")
@@ -40,6 +38,5 @@ def login():
         user = db.session.query(Users).filter_by(email=form.email.data).first()
         if user and user.pw == form.password.data :
             session["user_id"] = user.user_id
-            print(session)
             return redirect(url_for("home"))
     return render_template("login.html", title="Login", form=form)

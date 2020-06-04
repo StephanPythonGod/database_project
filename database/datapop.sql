@@ -121,13 +121,13 @@ insert into personal_data (fname, lname, tax_nr, phone_nr, ssn, city, street, zi
 insert into personal_data (fname, lname, tax_nr, phone_nr, ssn, city, street, zip_code, user_id) values ('Oralle', 'McNabb', 7438979, '+62 (669) 323-6026', '274-56-6874', 'Mlawat', '26467 Dryden Drive', 49723, null);
 insert into personal_data (fname, lname, tax_nr, phone_nr, ssn, city, street, zip_code, user_id) values ('Brigit', 'Brabin', 6290277, '+33 (763) 103-8161', '854-02-3657', 'Ajaccio', '76335 Oriole Place', 16577, null);
 
-insert into users (email, pw, ssn) values ('mpuffett0@tmall.com', 'context-sensitive', '151-03-8296');
-insert into users (email, pw, ssn) values ('rgandy1@lycos.com', 'Focused', '371-82-3085');
-insert into users (email, pw, ssn) values ('ehindsberg2@ted.com', 'Pre-emptive', '624-18-5142');
-insert into users (email, pw, ssn) values ('aserraillier3@imdb.com', 'Networked', '230-69-2451');
-insert into users (email, pw, ssn) values ('hpaynes4@vkontakte.ru', 'Seamless', '714-45-3791');
-insert into users (email, pw, ssn) values ('kcockerton5@lycos.com', 'Assimilated', '655-53-2932');
-insert into users (email, pw, ssn) values ('acrumbie6@blogs.com', 'mission-critical', '354-46-1538');
-insert into users (email, pw, ssn) values ('mcluckie7@wisc.edu', 'methodology', '482-89-5651');
-insert into users (email, pw, ssn) values ('eashelford8@mediafire.com', 'disintermediate', '130-14-0803');
-insert into users (email, pw, ssn) values ('hpeckham9@unicef.org', 'open system', '746-21-8671');
+insert into users (email, pw, ssn) values ('test@mail.com', 'password', '580-99-2561');
+insert into users (email, pw, ssn) values ('rgandy1@lycos.com', 'Focused', '588-10-8202');
+insert into users (email, pw, ssn) values ('ehindsberg2@ted.com', 'Pre-emptive', '118-97-1947');
+insert into users (email, pw, ssn) values ('aserraillier3@imdb.com', 'Networked', '159-35-0899');
+insert into users (email, pw, ssn) values ('hpaynes4@vkontakte.ru', 'Seamless', '732-23-1084');
+insert into users (email, pw, ssn) values ('kcockerton5@lycos.com', 'Assimilated', '385-22-1329');
+insert into users (email, pw, ssn) values ('acrumbie6@blogs.com', 'mission-critical', '794-16-8440');
+insert into users (email, pw, ssn) values ('mcluckie7@wisc.edu', 'methodology', '771-81-1278');
+insert into users (email, pw, ssn) values ('eashelford8@mediafire.com', 'disintermediate', '274-56-6874');
+insert into users (email, pw, ssn) values ('hpeckham9@unicef.org', 'open system', '854-02-3657');
