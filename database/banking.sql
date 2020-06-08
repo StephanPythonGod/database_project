@@ -17,7 +17,7 @@ CREATE TABLE PERSONAL_DATA (
 );
 CREATE TABLE TRANSACTION_IN (
 	trans_id VARCHAR(50) NOT NULL,
-	created_at TIMESTAMP NOT NULL,
+	created_at DATE NOT NULL,
     amount VARCHAR(50) NOT NULL,
     recipient VARCHAR(50) NOT NULL,
     sender VARCHAR(50) NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE TRANSACTION_IN (
 );
 CREATE TABLE TRANSACTION_OUT (
 	trans_id VARCHAR(50) NOT NULL,
-	created_at TIMESTAMP NOT NULL,
+	created_at DATE NOT NULL,
     amount VARCHAR(50) NOT NULL,
     recipient VARCHAR(50) NOT NULL,
     PRIMARY KEY (trans_id)
@@ -48,8 +48,6 @@ CREATE TABLE CONVERSATION (
 	answers VARCHAR(50) NOT NULL
 );
 CREATE TABLE EmployeeRequest (
-	request_id VARCHAR(50),
-    employee_id VARCHAR(50)
 );
 CREATE TABLE REQUEST (
 	request_id VARCHAR(50) NOT NULL,
