@@ -1,0 +1,50 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+body {
+    background-image: url("/static/images/Picture1.png");
+}
+.header{
+    background-color: darkgray;
+    text-align: center;
+}
+.footer{
+    background-color: darkgray;
+    text-align: center;
+}
+.description{
+    background-color: lightgray;
+    margin: 7px;
+}
+.input{
+    background-color: lightgray;
+    margin: 7px;
+}
+table {
+    border: solid 1px;
+    border-radius: 16px;
+    border-color: black;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+}
+.button {
+    background-color: lightgray;
+}
+div.service {
+    width: 100%;
+    background-color: white;
+    height: 60px;
+}
+.block {
+    display: block;
+}
+i.fas.fa-calender-alt {
+    color: blue;
+}

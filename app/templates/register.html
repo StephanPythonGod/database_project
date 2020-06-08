@@ -3,31 +3,29 @@
     <div>
         <form method="POST" action="">
             {{ form.hidden_tag() }}
-            <fieldset>
-                <legend>
-                    Registrieren Sie sich
-                </legend>
-                <div>
-                    {{ form.email.label() }}
-                    {{ form.email }}
-                </div>
-                <div>
-                    {{ form.password.label() }}
-                    {{ form.password }}
-                </div>
-                <div>
-                    {{ form.confirm_password.label() }}
-                    {{ form.confirm_password }}
-                </div>
-            </fieldset>
-                <div>
-                    {{ form.submit }}
-                </div>
+            <table>
+                <tr>
+                    <th class="header" colspan="2" >Registrieren Sie sich</th>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.email.label() }}</th>
+                    <td class="input">{{ form.email }}</td>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.password.label() }}</th>
+                    <td class="input">{{ form.password }}</td>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.confirm_password.label() }}</th>
+                    <td class="input">{{ form.confirm_password }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="button"><center>{{ form.submit }}</center></td>
+                </tr>
         </form>
     </div>
-    <div>
-        <small>
-            Already Have An Account? <a href="{{ url_for("login") }}">Login</a>
-        </small>
-    </div>
+                <tr><small>
+                    <td class="footer" colspan="2" >Already Have An Account? <a href="{{ url_for('login') }}">Login</a></td>
+                </small></tr>
+    </table>
 {% endblock %}

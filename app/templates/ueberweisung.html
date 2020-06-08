@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Ueberweisung</title>
+    <link rel="stylesheet" href="../css/fts_style.css" type="text/css">
+</head>
+
+<body id="ueberweisung">
+    <div>
+        <a href="fts_konto.htm">
+            <h1 class="ntc">NTC</h1>
+        </a>
+    </div>
+    <div>
+        <h5 class="ntc2">Banking </h5>
+    </div>
+
+    <table>
+        <form action="beratungsgespraech.php" method="post">
+            <tr>
+                <th colspan="2">
+                    <h3>Überweisungsauftrag abgeben:</h3>
+                </th>
+            </tr>
+            <tr>
+                <th class="formular">Zahlungsempfänger:</th>
+                <td><input placeholder="Name, Vorname" class="daten" type="text" name="empfaenger"></td class="daten">
+            </tr>
+            <tr>
+                <th class="formular">IBAN:</th class="formular">
+                <td><input placeholder="DE00 0000 0000 0000 0000 00" class="daten" type="text" name="iban"></td>
+            </tr>
+            <tr>
+                <th class="formular">BIC:</th class="formular">
+                <td><input placeholder="Bei Eingabe von IBAN nicht erforderlich." class="daten" type="text" name="bic"></td class="daten">
+            </tr>
+            <tr>
+                <th class="formular">Betrag:</th class="formular">
+                <td><input placeholder="Euro, Cent" class="daten" type="text" name="betrag"></td class="daten">
+            </tr>
+            <tr>
+                <th class="formular">Verwendungszweck:</th class="formular">
+                <td><input placeholder="Maximal 54 Stellen" class="daten" type="text" name="verwendungszweck"></td class="daten">
+            </tr>
+            <tr>
+                <td colspan="2"><br><input class="button" type="Submit" value="Abschicken"></td>
+            </tr>
+    </table>
+    </form>
+</body>
+
+</html>

@@ -1,29 +1,39 @@
-{% extends "base.html" %}
-{% block content %}
-    <div>
-        <form method="POST" action="">
-            {{ form.hidden_tag() }}
-            <fieldset>
-                <legend>
-                    Loggen Sie sich ein
-                </legend>
-                <div>
-                    {{ form.email.label() }}
-                    {{ form.email }}
-                </div>
-                <div>
-                    {{ form.password.label() }}
-                    {{ form.password }}
-                </div>
-            </fieldset>
-            <div>
-                {{ form.submit }}
-            </div>
-        </form>
-        <div>
-            <small>
-                Need An Account? <a href="{{ url_for("register") }}">Register</a>
-            </small>
-        </div>
-    </div>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Database Project</title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    </head>
+    <body>
+        <table>
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <tr>
+                    <th class="header" colspan="2"><h4>Please enter your credentials:</h4></th>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.email.label() }}</th>
+                    <td class="input">{{ form.email }}</td>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.password.label() }}</th>
+                    <td class="input">{{ form.password }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="button"><center>{{ form.submit }}</center></td>
+                </tr>
+            </form>
+                <tr>
+                    <td class="footer" colspan="2"><small>Need An Account? <a href="{{ url_for('register') }}">Register</small></a></td>
+                </tr>
+        </table>
+    </body>
+</html>

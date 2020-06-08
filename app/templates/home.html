@@ -1,5 +1,36 @@
-{% extends "base.html" %}
-{% block content %}
-    <p>{{ user.email }}</p>
-    <p>{{ user.user_id }}</p>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Database Project</title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    </head>
+    <body>
+        
+        {% extends "base.html" %}
+        {% block content %}
+        <br><br>
+        <h3><center>Herzlich Willkommen in Ihrer persönlichen Online-Banking Übersicht {{ user.email }}</center></h3>
+        <br>
+        <h6>Ihre User-ID lautet: {{ user.user_id }}!</h6>
+        <br> <br> <br>
+        <h4>Ihr aktueller Kontostand beträgt:</h4><h3 style="display:inline">3.768,97 €.</h3>
+        <br><br><br><br>
+        <div class="service">
+            <h5>Über die nachfolgenden Links können Sie die Services unserer Bank nutzen.</h5>
+        <br><br>
+        <a href="beratungsgespraech.html"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-calendar-alt"> Beratungstermin</i></button></a>
+        <a href="ueberweisung.html"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-money-check"> Überweisung</i></button></a>
+        <a href="kredit.html"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-hand-holding-usd"> Kredit anfordern</i></button></a>
+        </div>
+        {% endblock %}
+    </body>
+</html>
+    
