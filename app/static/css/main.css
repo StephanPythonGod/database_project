@@ -20,14 +20,16 @@ body {
 .description{
     background-color: lightgray;
     margin: 7px;
+    padding: 7px;
 }
 .input{
     background-color: lightgray;
     margin: 7px;
+    padding: 7px;
 }
 table {
     border: solid 1px;
-    border-radius: 16px;
+    border-radius: 8px;
     border-color: black;
     padding: 10px;
     margin-left: auto;
@@ -35,16 +37,8 @@ table {
     margin-top: 75px;
 }
 .button {
-    background-color: lightgray;
+    margin: 15px;
 }
-div.service {
-    width: 100%;
-    background-color: white;
-    height: 60px;
-}
-.block {
-    display: block;
-}
-i.fas.fa-calender-alt {
-    color: blue;
-}
+legend {
+    padding: 5px 10px;
+  }

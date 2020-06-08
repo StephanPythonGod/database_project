@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,17 +19,26 @@
         <br><br>
         <h3><center>Herzlich Willkommen in Ihrer persönlichen Online-Banking Übersicht {{ user.email }}</center></h3>
         <br>
-        <h6>Ihre User-ID lautet: {{ user.user_id }}!</h6>
-        <br> <br> <br>
-        <h4>Ihr aktueller Kontostand beträgt:</h4><h3 style="display:inline">3.768,97 €.</h3>
-        <br><br><br><br>
-        <div class="service">
+        <div>
             <h5>Über die nachfolgenden Links können Sie die Services unserer Bank nutzen.</h5>
-        <br><br>
         <a href="beratungsgespraech.html"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-calendar-alt"> Beratungstermin</i></button></a>
         <a href="ueberweisung.html"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-money-check"> Überweisung</i></button></a>
         <a href="kredit.html"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-hand-holding-usd"> Kredit anfordern</i></button></a>
         </div>
+        <br> <br> 
+        <fieldset>
+            <legend><h4>Ihr aktueller Kontostand beträgt: {{volume}} </legend></h4>
+            <table>
+                {% for trans in transactions %}
+                <tr>
+                <th>Betrag: </th>
+                <td>{{trans.amount}}</td>
+                <td>{{trans.created_at}}</td>
+                <td>{{trans.recipient}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </fieldset>
         {% endblock %}
     </body>
 </html>
