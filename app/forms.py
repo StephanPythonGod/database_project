@@ -18,3 +18,8 @@ class LoginForm(FlaskForm):
     remember = BooleanField("Eingeloggt bleiben?")
 
     submit = SubmitField("Login")
+
+class BeratungsForm(FlaskForm):
+    question = StringField("question", validators=[DataRequired()])
+
+    submit = SubmitField("Anfrage senden")

@@ -1,4 +1,4 @@
-insert into bankaccount (acc_address, acc_number, credit_limit, volume) values ('FR59 5403 3230 04LL CKB3 PGZX Z81', 1, 5098, 1000.0);
+insert into bankaccount (acc_address, acc_number, credit_limit, volume, user_id) values ('FR59 5403 3230 04LL CKB3 PGZX Z81', 1, 5098, 1000.0, 1);
 insert into bankaccount (acc_address, acc_number, credit_limit, volume) values ('CH56 5978 9KWW YZDT TNIE F', 2, 7763, 1000.0);
 insert into bankaccount (acc_address, acc_number, credit_limit, volume) values ('LT91 0658 8515 7337 8021', 3, 3348, 1000.0);
 insert into bankaccount (acc_address, acc_number, credit_limit, volume) values ('FR56 7291 9064 628S HQDZ 6M12 F90', 4, 5406, 1000.0);
@@ -333,3 +333,4 @@ insert into transaction_out (trans_id, created_at, amount, recipient, user_id) v
 insert into transaction_out (trans_id, created_at, amount, recipient, user_id) values (98, '2019-02-04', -9852.23, 'PS18 JEMR OC1G EEOO 3WCK GAAY 1OOU P', '3');
 insert into transaction_out (trans_id, created_at, amount, recipient, user_id) values (99, '2019-09-17', -3329.77, 'SM96 Y055 0164 901N 4IKI BJN2 BBB', '3');
 insert into transaction_out (trans_id, created_at, amount, recipient, user_id) values (100, '2020-04-30', -8374.01, 'FR77 3520 6557 872I IWKE HWYA Q97', '3');
+
