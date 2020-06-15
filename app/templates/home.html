@@ -27,7 +27,8 @@
         <br><br>
         <center>
         <a href="beratungsgespraech"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-calendar-alt"> Beratungstermin</i></button></a>
-        <a href="ueberweisung"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-money-check"> Überweisung</i></button></a>    
+        <a href="ueberweisung"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-money-check"> Überweisung</i></button></a>
+        <a href="personaldata/{{user.user_id}}/update"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-money-check"> Perönliche Daten Ändern</i></button></a>    
         </center>
         </div>
         <br><br> 
@@ -35,12 +36,12 @@
 
 
         <fieldset>
-            <legend><h4>Ihr aktueller Kontostand beträgt: {{volume}} </legend></h4>
+            <legend><h4>Ihr aktueller Kontostand beträgt: {{volume}}€ </legend></h4>
             <table>
                 {% for trans in transactions %}
                 <tr>
                 <th>Betrag: </th>
-                <td>{{trans.amount}}</td>
+                <td>{{trans.amount}}€</td>
                 <td>{{trans.created_at}}</td>
                 <td>{{trans.recipient}}</td>
                 <td>

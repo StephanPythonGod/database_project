@@ -48,8 +48,9 @@ def home():
         outgoing += float(i.amount)
     outgoing = round(outgoing, 2)
     
+    bankaccount.volume = round(incoming + outgoing, 2)
     volume =  round(float(bankaccount.volume),2)  
-    print(round(incoming + outgoing, 2))
+    
     all_transactions = incomming_query + outgoing_query
     all_transactions.sort(key=lambda i: i.created_at)
     all_transactions = list(reversed(all_transactions))
@@ -114,6 +115,35 @@ def personaldata(user_id):
     else:
         print("Daten falsch")
     return render_template("personaldata.html", title="Personal Data", form=form)
+
+@app.route("/personaldata/<user_id>/update", methods=["GET","POST"])
+def update_personaldata(user_id):
+    #Update the personal Data with flask wtf
+    pd = db.session.query(Personal_data).filter_by(user_id=user_id).first()
+    form = PersonalDataForm()
+    if form.validate_on_submit():
+        pd.fname = form.fname.data
+        pd.lname = form.lname.data
+        pd.tax_nr = form.tax_nr.data
+        pd.phone_nr = form.phone_nr.data
+        pd.ssn = form.ssn.data
+        pd.city = form.city.data
+        pd.street = form.street.data
+        pd.zip_code = form.zip_code.data
+        db.session.commit()
+        print("Updated Personal Data")
+        return redirect(url_for("home"))
+    elif request.method == "GET":
+        form.fname.data = pd.fname
+        form.lname.data = pd.lname
+        form.tax_nr.data = pd.tax_nr
+        form.phone_nr.data = pd.phone_nr
+        form.ssn.data = pd.ssn 
+        form.city.data = pd.city
+        form.street.data = pd.street 
+        form.zip_code.data = pd.zip_code
+        return render_template("personaldata.html", form=form)
+
 
 @app.route("/", methods=['GET', 'POST'])
 def login():
