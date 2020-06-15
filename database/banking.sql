@@ -34,7 +34,7 @@ CREATE TABLE BANKACCOUNT (
 	acc_address VARCHAR(50) NOT NULL,
 	acc_number VARCHAR(50) NOT NULL,
     credit_limit VARCHAR(50) NOT NULL,
-    volume VARCHAR(50) NOT NULL,
+    volume FLOAT NOT NULL,
     PRIMARY KEY (acc_number)
 );
 CREATE TABLE EMPLOYEE (
