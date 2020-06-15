@@ -1,4 +1,4 @@
-insert into bankaccount (acc_address, acc_number, credit_limit, volume, user_id) values ('FR59 5403 3230 04LL CKB3 PGZX Z81', 1, 5098, 1000.0, 1);
+insert into bankaccount (acc_address, acc_number, credit_limit, volume) values ('FR59 5403 3230 04LL CKB3 PGZX Z81', 1, 5098, 1000.0);
 insert into bankaccount (acc_address, acc_number, credit_limit, volume) values ('CH56 5978 9KWW YZDT TNIE F', 2, 7763, 1000.0);
 insert into bankaccount (acc_address, acc_number, credit_limit, volume) values ('LT91 0658 8515 7337 8021', 3, 3348, 1000.0);
 insert into bankaccount (acc_address, acc_number, credit_limit, volume) values ('FR56 7291 9064 628S HQDZ 6M12 F90', 4, 5406, 1000.0);
@@ -131,6 +131,9 @@ insert into users (email, pw, ssn) values ('acrumbie6@blogs.com', 'mission-criti
 insert into users (email, pw, ssn) values ('mcluckie7@wisc.edu', 'methodology', '771-81-1278');
 insert into users (email, pw, ssn) values ('eashelford8@mediafire.com', 'disintermediate', '274-56-6874');
 insert into users (email, pw, ssn) values ('hpeckham9@unicef.org', 'open system', '854-02-3657');
+
+UPDATE bankaccount SET user_id = 1 WHERE "acc_number" = '1';
+UPDATE personal_data SET user_id = 1 WHERE "ssn" = '580-99-2561';
 
 insert into transaction_in (trans_id, created_at, amount, recipient, sender, acc_number) values (1, '2019-06-01', 4705.748, 'FR59 5403 3230 04LL CKB3 PGZX Z81', 'AD31 1831 5238 QZRG RKUE MQAK', '1');
 insert into transaction_in (trans_id, created_at, amount, recipient, sender, acc_number) values (2, '2019-10-14', 8840.98, 'FR59 5403 3230 04LL CKB3 PGZX Z81', 'NO12 3588 6681 939', '1');
