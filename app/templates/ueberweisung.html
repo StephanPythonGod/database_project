@@ -1,35 +1,24 @@
-<html>
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Beratungsgespraech</title>
-    <link rel="stylesheet" href="../css/fts_style.css" type="text/css">
-</head>
-
-<body>
-    <div>
-        <form method="POST" action="">
-            {{ form.hidden_tag() }}
-            <table>
-                <tr>
-                    <th class="header" colspan="2" >Überweisung tätigen</th>
-                </tr>
-                <tr>
-                    <th class="description">{{ form.recipient.label() }}</th>
-                    <td class="input">{{ form.recipient }}</td>
-                </tr>
-                <tr>
-                    <th class="description">{{ form.amount.label() }}</th>
-                    <td class="input">{{ form.amount }}</td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="button"><center>{{ form.submit }}</center></td>
-                </tr>
-        </form>
-    </div>
-</body>
-
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <table>
+            <tr>
+                <th class="header" colspan="2" >Überweisung tätigen</th>
+            </tr>
+            <tr>
+                <th class="description">{{ form.recipient.label() }}</th>
+                <td class="input">{{ form.recipient }}</td>
+            </tr>
+            <tr>
+                <th class="description">{{ form.amount.label() }}</th>
+                <td class="input">{{ form.amount }}</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="button"><center>{{ form.submit }}</center></td>
+            </tr>
+    </form>
+</table>
+</div>
+{% endblock %}

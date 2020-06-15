@@ -1,15 +1,5 @@
-<html>
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Beratungsgespraech</title>
-    <link rel="stylesheet" href="../css/fts_style.css" type="text/css">
-</head>
-
-<body>
+{% extends "base.html" %}
+{% block content %}
     <div>
         <form method="POST" action="">
             {{ form.hidden_tag() }}
@@ -25,7 +15,6 @@
                     <td colspan="2" class="button"><center>{{ form.submit }}</center></td>
                 </tr>
         </form>
+            </table>
     </div>
-</body>
-
-</html>
+{% endblock %}
