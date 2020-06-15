@@ -48,8 +48,8 @@ def home():
         outgoing += float(i.amount)
     outgoing = round(outgoing, 2)
     
-    volume =  round(float(bankaccount.volume),2) # round(incoming + outgoing, 2)
-
+    volume =  round(float(bankaccount.volume),2)  
+    print(round(incoming + outgoing, 2))
     all_transactions = incomming_query + outgoing_query
     all_transactions.sort(key=lambda i: i.created_at)
     all_transactions = list(reversed(all_transactions))
@@ -156,7 +156,7 @@ def forward(trans_id, amount):
     try:
         ses = db.session()
         bankacc = ses.query(Bankaccount).filter(Bankaccount.user_id == session["user_id"]).first()
-        bankacc.volume = float(bankacc.volume) + float(trans.amount)
+        bankacc.volume = float(bankacc.volume) - float(amount)
         ses.delete(trans) 
         ses.commit()
     except:            
