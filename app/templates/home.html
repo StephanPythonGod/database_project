@@ -17,12 +17,23 @@
         {% extends "base.html" %}
         {% block content %}
         <br><br>
-        <h3><center>Herzlich Willkommen in Ihrer persönlichen Online-Banking Übersicht {{ pd.fname }}</center></h3>
+        <h3><center>Herzlich Willkommen in Ihrer persönlichen Online-Banking Übersicht {{ pd.fname }} {{ pd.lname }}</center></h3>
         <br>
 
         <h6>Ihre User-ID lautet: {{ user.user_id }}!</h6>
-        <br> <br> <br>
+        <br> <br>
+        <div class="service">
+            <h5>Über die nachfolgenden Links können Sie die Services unserer Bank nutzen.</h5>
+        <br><br>
+        <center>
+        <a href="beratungsgespraech"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-calendar-alt"> Beratungstermin</i></button></a>
+        <a href="ueberweisung"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-money-check"> Überweisung</i></button></a>    
+        </center>
+        </div>
+        <br><br> 
         
+
+
         <fieldset>
             <legend><h4>Ihr aktueller Kontostand beträgt: {{volume}} </legend></h4>
             <table>
@@ -32,20 +43,14 @@
                 <td>{{trans.amount}}</td>
                 <td>{{trans.created_at}}</td>
                 <td>{{trans.recipient}}</td>
+                <td>
+                    <a href="/forward/{{trans.trans_id}}/{{trans.amount}}"><button>Löschen</button></a>
+                </td>
                 </tr>
                 {% endfor %}
             </table>
         </fieldset>
 
-        <br><br><br><br>
-        <div class="service">
-            <h5>Über die nachfolgenden Links können Sie die Services unserer Bank nutzen.</h5>
-        <br><br>
-        <a href="beratungsgespraech"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-calendar-alt"> Beratungstermin</i></button></a>
-        <a href="ueberweisung.html"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-money-check"> Überweisung</i></button></a>
-        <a href="pd.html"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-hand-holding-usd"> Kredit anfordern</i></button></a>
-        </div>
-        <br><br> 
         
         {% endblock %}
     </body>

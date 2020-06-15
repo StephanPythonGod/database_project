@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+    <div>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <table>
+                <tr>
+                    <th class="header" colspan="2" >Geben Sie Ihre Daten ein</th>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.fname.label() }}</th>
+                    <td class="input">{{ form.fname }}</td>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.lname.label() }}</th>
+                    <td class="input">{{ form.lname }}</td>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.tax_nr.label() }}</th>
+                    <td class="input">{{ form.tax_nr }}</td>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.phone_nr.label() }}</th>
+                    <td class="input">{{ form.phone_nr }}</td>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.ssn.label() }}</th>
+                    <td class="input">{{ form.ssn }}</td>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.city.label() }}</th>
+                    <td class="input">{{ form.city }}</td>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.street.label() }}</th>
+                    <td class="input">{{ form.street }}</td>
+                </tr>
+                <tr>
+                    <th class="description">{{ form.zip_code.label() }}</th>
+                    <td class="input">{{ form.zip_code }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="button"><center>{{ form.submit }}</center></td>
+                </tr>
+        </form>
+    </div>
+    </table>
+{% endblock %}
