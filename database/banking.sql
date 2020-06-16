@@ -18,7 +18,7 @@ CREATE TABLE PERSONAL_DATA (
 CREATE TABLE TRANSACTION_IN (
 	trans_id VARCHAR(50) NOT NULL,
 	created_at DATE NOT NULL,
-    amount VARCHAR(50) NOT NULL,
+    amount FLOAT NOT NULL,
     recipient VARCHAR(50) NOT NULL,
     sender VARCHAR(50) NOT NULL,
     PRIMARY KEY (trans_id)
@@ -26,14 +26,14 @@ CREATE TABLE TRANSACTION_IN (
 CREATE TABLE TRANSACTION_OUT (
 	trans_id VARCHAR(50) NOT NULL,
 	created_at DATE NOT NULL,
-    amount VARCHAR(50) NOT NULL,
+    amount FLOAT NOT NULL,
     recipient VARCHAR(50) NOT NULL,
     PRIMARY KEY (trans_id)
 );
 CREATE TABLE BANKACCOUNT (
 	acc_address VARCHAR(50) NOT NULL,
 	acc_number VARCHAR(50) NOT NULL,
-    credit_limit VARCHAR(50) NOT NULL,
+    credit_limit FLOAT NOT NULL,
     volume FLOAT NOT NULL,
     PRIMARY KEY (acc_number)
 );
