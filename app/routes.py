@@ -38,9 +38,14 @@ def home():
     #get bankaccount volume and list of all transactions
     incomming_query = db.session.query(Transaction_in).filter_by(acc_number = acc_number).all()
     incoming = 0
+    
     for i in incomming_query:
+        
+        
         incoming += float(i.amount)
+        
     incoming = round(incoming, 2)
+    
 
     outgoing_query = db.session.query(Transaction_out).filter_by(user_id = user_id).all()
     outgoing = 0
@@ -54,6 +59,9 @@ def home():
     all_transactions = incomming_query + outgoing_query
     all_transactions.sort(key=lambda i: i.created_at)
     all_transactions = list(reversed(all_transactions))
+
+    for i in all_transactions:
+        i.amount = round(i.amount, 2)
 
 
     return render_template("home.html", user = user, volume = volume, transactions = all_transactions, pd = pd)
